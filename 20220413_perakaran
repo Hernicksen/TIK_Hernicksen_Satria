@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    /*
+    Jika nilai dengan sisa bagi = 0, bilangan genap
+    Jika bukan, bilangan ganjil
+    */
+    int nilai;
+    string keterangan;
+    cout<<"Masukkan Nilai = ";cin>>nilai;
+    if (nilai < 0 || nilai > 100) {
+        keterangan = "Diluar Jangkauan";
+    }
+    else if (nilai >= 90) {
+        keterangan = "Sangat Memuaskan";
+    }
+    else if (nilai >= 80) {
+        keterangan = "Memuaskan";
+    }
+    else if (nilai >= 75) {
+        keterangan = "Cukup";
+    }
+    else if (nilai < 75) {
+        keterangan = "Tidak lulus";
+    }
+    cout<<keterangan;
+}
