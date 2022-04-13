@@ -1,0 +1,30 @@
+// nested if
+// percabangan bersarang
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Masukkan angka: ";
+    cin>>num;
+    if (num % 2 == 0) {
+        cout<<"Bilangan Genap"<<endl;
+        if (num < 10){
+            cout<<"Bilangan Genap kurang dari 10";
+        }
+        else; {
+            cout<<"Bilangan Genap lebih dari 10";
+        }
+    }
+    else {
+        cout<<"Bilangan Ganjil"<<endl;
+        if (num < 10){
+            cout<<"Bilangan Ganjil kurang dari 10";
+        }
+        else; {
+            cout<<"Bilangan Ganjil lebih dari 10";
+        }
+    }
+    
+}
