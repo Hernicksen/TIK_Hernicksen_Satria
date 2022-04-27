@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int batasbawah, batasatas;
+   cout<<"Masukkan batas bawah: "; cin>>batasbawah;
+   cout<<"Masukkan batas atas: "; cin>>batasatas;
+   
+   if (batasbawah > batasatas){
+           cout<<"Batas bawah tidak boleh lebih dari batas atas!";
+           return 0;
+       }
+    else{
+    while (batasbawah++ <batasatas){
+       cout<<"Data ke -"<<batasbawah<<endl;
+       }
+    }
+   
+   return 0;
+}
