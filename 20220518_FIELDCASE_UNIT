@@ -1,0 +1,48 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+    int awal, akhir;
+    float amt;
+    string satuan[8] = {"", " milimeter", " centimeter", " desimeter", " meter", " dekameter", " hektameter", " kilometer"};
+    
+    cout<<"Satuan nilai awal: "<<endl<<"-------------------"<<endl;
+    cout<<"-> Milimeter  [KETIK ANGKA 1]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Centimeter [KETIK ANGKA 2]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Desimeter  [KETIK ANGKA 3]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Meter      [KETIK ANGKA 4]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Dekameter  [KETIK ANGKA 5]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Hektameter [KETIK ANGKA 6]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Kilometer  [KETIK ANGKA 7]"<<endl<<"-----------------------------"<<endl;
+    cout<<"Satuan awal yang dipilih (Pilih 1-7): ";cin>>awal;
+    
+    cout<<"Berapa"<<satuan[awal]<<"(Angka saja)? ";cin>>amt;
+    cout<<endl;
+    
+    cout<<"==================================================================="<<endl;
+    
+    cout<<"Nilai awal anda, yaitu "<<amt<<satuan[awal]<<". Ingin dikonversi ke: "<<endl<<"-----------------------------------------------------"<<endl;
+    cout<<"-> Milimeter  [KETIK ANGKA 1]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Centimeter [KETIK ANGKA 2]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Desimeter  [KETIK ANGKA 3]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Meter      [KETIK ANGKA 4]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Dekameter  [KETIK ANGKA 5]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Hektameter [KETIK ANGKA 6]"<<endl<<"-----------------------------"<<endl;
+    cout<<"-> Kilometer  [KETIK ANGKA 7]"<<endl<<"-----------------------------"<<endl;
+    cout<<"Satuan yang dipilih (Pilih 1-7): ";cin>>akhir;
+    
+    if(awal<akhir){
+        int selisih = akhir-awal;
+        cout<<"Nilai anda setelah dikonversi adalah "<<amt/pow(10,selisih)<<satuan[akhir]<<".";
+    }
+    else if(awal>akhir){
+        int selisih = awal-akhir;
+        cout<<"Nilai anda setelah dikonversi adalah "<<amt*pow(10,selisih)<<satuan[akhir]<<".";
+    }
+    else if(awal==akhir){
+        cout<<"Nilai anda setelah dikonversi adalah "<<awal<<satuan[akhir]<<".";
+    }
+}
